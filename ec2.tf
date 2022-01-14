@@ -7,7 +7,7 @@ resource "aws_instance" "server1" {
   associate_public_ip_address = true
   private_ip = var.private_ip_server_1
 
-  key_name = aws_key_pair.deployer.name
+  key_name = aws_key_pair.deployer.key_name
   depends_on = [
     aws_internet_gateway.gw
   ]
@@ -16,7 +16,7 @@ resource "aws_instance" "server1" {
 
   tags = {
     Name = "Server 1"
-    Environment = "Development"
+    Environment = var.environment
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_instance" "server2" {
   associate_public_ip_address = true
   private_ip = var.private_ip_server_2
 
-  key_name = aws_key_pair.deployer.name
+  key_name = aws_key_pair.deployer.key_name
   depends_on = [
     aws_internet_gateway.gw
   ]
@@ -38,6 +38,6 @@ resource "aws_instance" "server2" {
 
   tags = {
     Name = "Server 2"
-    Environment = "Development"
+    Environment = var.environment
   }
 }

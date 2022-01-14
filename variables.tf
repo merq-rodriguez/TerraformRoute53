@@ -3,6 +3,10 @@ variable "aws_region" {
   description = "Region AWS"
 }
 
+variable "environment" {
+  type = string
+}
+
 variable "ec2_ami" {
   type = string
   description = "Ami for instance EC2"

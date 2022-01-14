@@ -6,7 +6,12 @@
 * VPC
 * Subnets
 * Key pairs
-* Instances EC2
+* Instances EC2 - (Jenkins)
 * Security Groups
 * Internet Gateway
 * Route Table
+
+> Connection to ec2 instance
+```bash
+$ ssh -i id_rsa.pub -l ec2-user [IP] 
+```
