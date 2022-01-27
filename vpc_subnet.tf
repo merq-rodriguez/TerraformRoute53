@@ -20,7 +20,7 @@ resource "aws_subnet" "subnet_1" {
 
 resource "aws_subnet" "subnet_2" {
   vpc_id = aws_vpc.latam.id
-  availability_zone = var.availability_zone_subnet_1
+  availability_zone = var.availability_zone_subnet_2
   cidr_block = var.cidr_subnet_2
   tags = {
     Name = "Subnet-2"
@@ -29,7 +29,7 @@ resource "aws_subnet" "subnet_2" {
 
 resource "aws_subnet" "subnet_3" {
   vpc_id = aws_vpc.latam.id
-  availability_zone = var.availability_zone_subnet_1
+  availability_zone = var.availability_zone_subnet_3
   cidr_block = var.cidr_subnet_3
   tags = {
     Name = "Subnet-3"

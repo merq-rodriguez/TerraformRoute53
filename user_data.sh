@@ -5,3 +5,6 @@ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key 
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt update
 sudo apt install jenkins --yes
+
+sudo apt install nginx --yes
+sudo ufw allow 'Nginx HTTP'

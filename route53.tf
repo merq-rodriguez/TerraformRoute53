@@ -26,3 +26,11 @@ resource "aws_route53_record" "server2" {
   ttl = "300"
   records = [aws_instance.server2.private_ip]
 }
+
+resource "aws_route53_record" "elb_latam" {
+  zone_id = aws_route53_zone.dev.id
+  name = "elblatam.${aws_route53_zone.dev.name}"
+  type = "CNAME"
+  ttl = "300"
+  records = [aws_elb.elb_latam.dns_name]
+}
